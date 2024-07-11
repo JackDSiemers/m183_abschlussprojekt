@@ -10,9 +10,8 @@ Dieses Projekt implementiert Sicherheitsfunktionen für eine Webanwendung mit Sp
 - **Sicherheitstests**: Statische Codeanalyse, Penetration Testing, automatisierte Scans.
 - **Gegenmassnahmen**: Input Validierung, sichere Konfigurationen, regelmässige Updates.
 
-### 3. Authentifizierung und Autorisierung
+### 3. Authentifizierung
 - **Authentifizierung**: Die Authentifizierung erfolgt in unserem Projekt mit einem Json Web Token (JWT) und das Projekt wurde auch mit Postman getestet.
-- **Autorisierung**: Rollen und Berechtigungen (@PreAuthorize, @Secured).
 
 ### 4. Sicherheitsaspekte bei Entwurf und Implementierung
 - **Architektur**: Layered Security, Least Privilege, Defense in Depth.
