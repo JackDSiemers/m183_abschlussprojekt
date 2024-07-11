@@ -16,8 +16,7 @@ Dieses Projekt implementiert Sicherheitsfunktionen für eine Webanwendung mit Sp
 ### 4. Sicherheitsaspekte bei Entwurf und Implementierung
 - **Architektur**: Layered Security, Least Privilege.
 
-### 5. Auditing und Logging
-- **Auditing**: Erfassung sicherheitsrelevanter Ereignisse.
+### 5. Logging
 - **Logging**: Verwendung von SLF4J und Logback.
 
 
