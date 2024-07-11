@@ -1,7 +1,6 @@
 package ch.bbw.m183.springsecurityabschlussprojekt.model;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,10 +9,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.TableGenerator;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Table(name = "Application-user")
 public class User implements UserDetails {
 
   @Id
@@ -32,12 +38,12 @@ public class User implements UserDetails {
 
   @Override
   public String getPassword() {
-    return "";
+    return this.password;
   }
 
   @Override
   public String getUsername() {
-    return "";
+    return this.username;
   }
 
   @Override
@@ -58,5 +64,13 @@ public class User implements UserDetails {
   @Override
   public boolean isEnabled() {
     return UserDetails.super.isEnabled();
+  }
+
+  public User(String username, String password, String firstName, String lastName) {
+    this.username = username;
+    this.password = password;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.role = "ROLE_USER";
   }
 }
